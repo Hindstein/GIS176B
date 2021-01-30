@@ -1,0 +1,14 @@
+APN	OWNER	ADDRESS	CITY	STATE
+52-015-21	Arlean Secrease	9884 Bullock	Hutto	TX
+52-015-21	Carlo Swarm	9884 Bullock	Hutto	TX
+52-015-21	Carter Fergusen	1305 Hogg	Hutto	TX
+52-015-22	Chantay Yanagi	16720 Lead St	Lenexa	KS
+52-015-23	Charlott Rioseco	6800 Riverwood	Yellow Jacket	CO
+52-015-23	Dick Rioseco	6800 Riverwood	Yellow Jacket	CO
+52-015-23	Fredda Hatke	6812 Riverwood	Yellow Jacket	CO
+52-016-24	Grisel Verrilli	7986 Memorial Dr	Essex	MD
+52-016-24	Hunter Darienzo	7986 Memorial Dr	Essex	MD
+52-016-25	Irwin Wurzbacher	3608 Picasso Ln	Novato	CA
+52-016-25	Kaycee Kosek	3615 Picasso Ln	Novato	CA
+52-016-25	Lane Magnia	4485 E 9th St	Novato	CA
+52-016-26	Lillia Lauderman	308 Foothill	Aberdeen	SD

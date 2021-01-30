@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html  dir="ltr" lang="en-us" xml:lang="en-us">
+<head>
+    <title>GEOG 176B - W21: Lab 2 Data</title>
+    <link rel="icon" href="https://gauchospace.ucsb.edu/courses/pluginfile.php/1/theme_adaptable/favicon/1611255101/favicon_circle30.png" />
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="moodle, GEOG 176B - W21: Lab 2 Data" />
+<link rel="stylesheet" type="text/css" href="https://gauchospace.ucsb.edu/courses/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.css" /><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://gauchospace.ucsb.edu/courses/theme/styles.php/adaptable/1611255101_1600720392/all" />
+<script>
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/gauchospace.ucsb.edu\/courses","sesskey":"8HY58l27JA","sessiontimeout":"10800","themerev":"1611255101","sessiontimeoutwarning":1200,"slasharguments":1,"theme":"adaptable","iconsystemmodule":"core\/icon_system_fontawesome","jsrev":"1611245403","admin":"admin","svgicons":true,"usertimezone":"America\/Los_Angeles","contextid":13646509,"langrev":1611663856,"templaterev":"1609893368"};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":false,"base":"https:\/\/gauchospace.ucsb.edu\/courses\/lib\/yuilib\/3.17.2\/","comboBase":"https:\/\/gauchospace.ucsb.edu\/courses\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/gauchospace.ucsb.edu\/courses\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/gauchospace.ucsb.edu\/courses\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/gauchospace.ucsb.edu\/courses\/theme\/yui_combo.php?m\/1611245403\/","combine":true,"comboBase":"https:\/\/gauchospace.ucsb.edu\/courses\/theme\/yui_combo.php?","ext":false,"root":"m\/1611245403\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-event":{"requires":["event-custom"]},"moodle-core-formchangechecker":{"requires":["base","event-focus","moodle-core-event"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-languninstallconfirm":{"requires":["base","node","moodle-core-notification-confirm","moodle-core-notification-alert"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-popuphelp":{"requires":["moodle-core-tooltip"]},"moodle-core-tooltip":{"requires":["base","node","io-base","moodle-core-notification-dialogue","json-parse","widget-position","widget-position-align","event-outside","cache-base"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-backup-backupselectall":{"requires":["node","event","node-event-simulate","anim"]},"moodle-backup-confirmcancel":{"requires":["node","node-event-simulate","moodle-core-notification-confirm"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-formatchooser":{"requires":["base","node","node-event-simulate"]},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-form-passwordunmask":{"requires":[]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-question-preview":{"requires":["base","dom","event-delegate","event-key","core_question_engine"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_attendance-groupfilter":{"requires":["base","node"]},"moodle-mod_oublog-savecheck":{"requires":["base","node","io","panel","moodle-core-notification-alert"]},"moodle-mod_oublog-tagselector":{"requires":["base","node","autocomplete","autocomplete-filters","autocomplete-highlighters"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-mod_scheduler-delselected":{"requires":["base","node","event"]},"moodle-mod_scheduler-saveseen":{"requires":["base","node","event"]},"moodle-mod_scheduler-studentlist":{"requires":["base","node","event","io"]},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-filter_glossary-autolinker":{"requires":["base","node","io-base","json-parse","event-delegate","overlay","moodle-core-event","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-filter_mathjaxloader-loader":{"requires":["moodle-core-event"]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-core-notification-confirm","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_grader-gradereporttable":{"requires":["base","node","event","handlebars","overlay","event-hover"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-tool_capability-search":{"requires":["base","node"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-tool_monitor-dropdown":{"requires":["base","event","node"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-warning","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emojipicker-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_fullscreen-button":{"requires":["event-resize","moodle-editor_atto-plugin"]},"moodle-atto_h5p-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_html-button":{"requires":["promise","moodle-editor_atto-plugin","moodle-atto_html-beautify","moodle-atto_html-codemirror","event-valuechange"]},"moodle-atto_html-beautify":{},"moodle-atto_html-codemirror":{"requires":["moodle-atto_html-codemirror-skin"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_panoptobutton-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_panoptoltibutton-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_recordrtc-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_recordrtc-recording"]},"moodle-atto_recordrtc-recording":{"requires":["moodle-atto_recordrtc-button"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_ucsbuservars-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]}}},"gallery":{"name":"gallery","base":"https:\/\/gauchospace.ucsb.edu\/courses\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/gauchospace.ucsb.edu\/courses\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1611245403\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/gauchospace.ucsb.edu\/courses\/lib\/javascript.php\/1611245403\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/gauchospace.ucsb.edu\/courses\/lib\/javascript.php\/1611245403\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]},"mathjax":{"name":"mathjax","fullpath":"https:\/\/cdn.jsdelivr.net\/npm\/mathjax@2.7.8\/MathJax.js?delayStartupUntil=configured"}}};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+    <!-- CSS print media -->
+    <link rel="stylesheet" type="text/css" href="https://gauchospace.ucsb.edu/courses/theme/adaptable/style/print.css" media="print">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" value="summary">
+    <meta name="twitter:site" value="GauchoSpace" />
+    <meta name="twitter:title" value="GEOG 176B - W21: Lab 2 Data" />
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="GEOG 176B - W21: Lab 2 Data" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://gauchospace.ucsb.edu/courses" />
+    <meta name="og:site_name" value="GauchoSpace" />
+
+    <!-- Chrome, Firefox OS and Opera on Android topbar color -->
+    <meta name="theme-color" content="#003660" />
+
+    <!-- Windows Phone topbar color -->
+    <meta name="msapplication-navbutton-color" content="#003660" />
+
+    <!-- iOS Safari topbar color -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#003660" />
+
+        <!-- Load Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,400i'
+    rel='stylesheet'
+    type='text/css'>
+    
+            <link href='https://fonts.googleapis.com/css?family=Roboto:400,400i'
+        rel='stylesheet'
+        type='text/css'>
+    
+            <link href='https://fonts.googleapis.com/css?family=Roboto:500,500i'
+        rel='stylesheet'
+        type='text/css'>
+    </head>
+<body  id="page-mod-resource-view" class="format-topcoll  path-mod path-mod-resource chrome dir-ltr lang-en_us yui-skin-sam yui3-skin-sam gauchospace-ucsb-edu--courses pagelayout-incourse course-103714 context-13646509 cmid-5801455 category-4034 theme_adaptable two-column  header-style1 has-page-header  nomobilenavigation">
+
+<div>
+    <a class="sr-only sr-only-focusable" href="#maincontent">Skip to main content</a>
+</div><script src="https://gauchospace.ucsb.edu/courses/lib/javascript.php/1611245403/lib/babel-polyfill/polyfill.min.js"></script>
+<script src="https://gauchospace.ucsb.edu/courses/lib/javascript.php/1611245403/lib/polyfills/polyfill.js"></script>
+<script src="https://gauchospace.ucsb.edu/courses/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.js"></script><script src="https://gauchospace.ucsb.edu/courses/theme/jquery.php/core/jquery-3.4.1.min.js"></script>
+<script src="https://gauchospace.ucsb.edu/courses/theme/jquery.php/theme_adaptable/pace-min.js"></script>
+<script src="https://gauchospace.ucsb.edu/courses/theme/jquery.php/theme_adaptable/jquery-flexslider-min.js"></script>
+<script src="https://gauchospace.ucsb.edu/courses/theme/jquery.php/theme_adaptable/tickerme.js"></script>
+<script src="https://gauchospace.ucsb.edu/courses/theme/jquery.php/theme_adaptable/jquery-easing-min.js"></script>
+<script src="https://gauchospace.ucsb.edu/courses/theme/jquery.php/theme_adaptable/adaptable_v2_1_1_2.js"></script>
+<script src="https://gauchospace.ucsb.edu/courses/lib/javascript.php/1611245403/lib/javascript-static.js"></script>
+<script>
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+<div id="page" class="nofull   standard">
+
+<div class="customalert alert alert-dismissable adaptable-alert-info fade in"><button type="button" class="close" data-dismiss="alert" aria-label="Close" data-alertkey="covid19resources2" data-alertindex="1"><span aria-hidden="true">&times;</span></button><i class="fa fa-info-circle fa-lg"></i>&nbsp;<b><i>Questions about COVID-19 and UCSB?</i> </b>Contact the COVID-19 Call Center at 805-893-3113 (M-F, 8AM-4PM) <em>or </em>email <a href="mailto:ucsb-covid19@ucsb.edu">ucsb-covid19@ucsb.edu</a>
+         
+         
+         </div>
+
+
+    <header id="adaptable-page-header-wrapper"  >
+
+    <div id="above-header" class="mb-lg-3">
+        <div class="container">
+            <nav class="navbar navbar-expand btco-hover-menu">
+
+                                <div id="adaptable-page-header-nav-drawer" data-region="drawer-toggle" class="d-lg-none mr-3">
+                    <button id="drawer" aria-expanded="false" aria-controls="nav-drawer" type="button"
+                            class="nav-link float-sm-left mr-1" data-side="left">
+                        <i class="fa fa-bars fa-fw " aria-hidden="true"></i>
+                        <span class="sr-only">Side panel</span>
+                    </button>
+                </div>
+                
+                <div class="collapse navbar-collapse">
+                
+                    <ul class="navbar-nav ml-auto my-auto">
+
+                        <div class="pull-left">
+                            <ul class="navbar-nav mr-auto"></ul>                        </div>
+
+                        <div class="my-auto m-1"><div class="dropdown pull-right newmenus newmenu5"><li class="nav-item dropdown my-auto"><a href="#" class="nav-link dropdown-toggle my-auto" role="button" id="0" aria-haspopup="true" aria-expanded="false" aria-controls="dropdown0" data-target="#" data-toggle="dropdown" title="Academics">Academics</a><ul role="menu" class="dropdown-menu" id="dropdown0" aria-labelledby="0"><li class=""><a class="dropdown-item" href="http://www.ucsb.edu/" target="_blank">UCSB Home</a></li><li class=""><a class="dropdown-item" href="https://my.sa.ucsb.edu/gold/Login.aspx" target="_blank">GOLD</a></li><li class=""><a class="dropdown-item" href="http://www.umail.ucsb.edu/" target="_blank">U-Mail</a></li><li class=""><a class="dropdown-item" href="https://mybarc.ucsb.edu/SIWeb/login.jsp" target="_blank">BARC</a></li></ul></li></div><div class="dropdown pull-right newmenus newmenu6"><li class="nav-item dropdown my-auto"><a href="#" class="nav-link dropdown-toggle my-auto" role="button" id="0" aria-haspopup="true" aria-expanded="false" aria-controls="dropdown0" data-target="#" data-toggle="dropdown" title="Wellbeing">Wellbeing</a><ul role="menu" class="dropdown-menu" id="dropdown0" aria-labelledby="0"><li class=""><a class="dropdown-item" href="https://wellbeing.ucsb.edu/" target="_blank">Student Wellbeing</a></li><li class=""><a class="dropdown-item" href="https://www.sa.ucsb.edu/responding-to-distressed-students/protocol" target="_blank">Refer a Distressed Student</a></li></ul></li></div></div>
+                                                <li class="nav-item d-xs-block d-sm-block d-md-none my-auto mx-md-1 my-auto">
+                            <a class="nav-link" href="https://gauchospace.ucsb.edu/courses/course/search.php">
+                                <i class="icon fa fa-search fa-fw " title="Search" aria-label="Search"></i>
+                            </a>
+                        </li>
+
+                        <div class="my-auto mx-md-1"><div class="popover-region collapsed popover-region-notifications"
+    id="nav-notification-popover-container" data-userid="176837"
+    data-region="popover-region">
+    <div class="popover-region-toggle nav-link"
+        data-region="popover-region-toggle"
+        role="button"
+        aria-controls="popover-region-container-601090b21cbec601090b21be122"
+        aria-haspopup="true"
+        aria-label="Show notification window with no new notifications"
+        tabindex="0">
+                <i class="icon fa fa-bell fa-fw "  title="Toggle notifications menu" aria-label="Toggle notifications menu"></i>
+        <div class="count-container hidden" data-region="count-container"
+        aria-label="There are 0 unread notifications">0</div>
+
+    </div>
+    <div 
+        id="popover-region-container-601090b21cbec601090b21be122"
+        class="popover-region-container"
+        data-region="popover-region-container"
+        aria-expanded="false"
+        aria-hidden="true"
+        aria-label="Notification window"
+        role="region">
+        <div class="popover-region-header-container">
+            <h3 class="popover-region-header-text" data-region="popover-region-header-text">Notifications</h3>
+            <div class="popover-region-header-actions" data-region="popover-region-header-actions">        <a class="mark-all-read-button"
+           href="#"
+           title="Mark all as read"
+           data-action="mark-all-read"
+           role="button"
+           aria-label="Mark all as read">
+            <span class="normal-icon"><i class="icon fa fa-check fa-fw " aria-hidden="true"  ></i></span>
+            <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+        </a>
+        <a href="https://gauchospace.ucsb.edu/courses/message/notificationpreferences.php?userid=176837"
+           title="Notification preferences"
+           aria-label="Notification preferences">
+            <i class="icon fa fa-cog fa-fw " aria-hidden="true"  ></i>
+        </a>
+</div>
+        </div>
+        <div class="popover-region-content-container" data-region="popover-region-content-container">
+            <div class="popover-region-content" data-region="popover-region-content">
+                        <div class="all-notifications"
+            data-region="all-notifications"
+            role="log"
+            aria-busy="false"
+            aria-atomic="false"
+            aria-relevant="additions"></div>
+        <div class="empty-message" tabindex="0" data-region="empty-message">You have no notifications</div>
+
+            </div>
+            <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+        </div>
+                <a class="see-all-link"
+                    href="https://gauchospace.ucsb.edu/courses/message/output/popup/notifications.php">
+                    <div class="popover-region-footer-container">
+                        <div class="popover-region-seeall-text">See all</div>
+                    </div>
+                </a>
+    </div>
+</div></div><li class="nav-item dropdown ml-2 my-auto"></li>
+                            <li class="nav-item dropdown ml-3 ml-md-4 mr-2 mr-md-0">
+                                <a class="nav-link dropdown-toggle my-auto" role="button" href="#"
+id="usermenu" data-toggle="dropdown"
+aria-haspopup="true" aria-expanded="false"
+aria-controls="usermenu-dropdown"
+aria-label="User menu"
+title="Ian Hinds">
+        <span class="d-none d-md-inline-block mx-1">Ian Hinds</span>
+    <img src="https://gauchospace.ucsb.edu/courses/pluginfile.php/2210799/user/icon/adaptable/f1?rev=83144146" class="userpicture" width="50" height="50" aria-hidden="true" />
+</a>
+
+<div class="dropdown-menu dropdown-menu-right" role="menu"
+id="usermenu-dropdown"
+aria-labelledby="usermenu" >
+    <a class="dropdown-item" href="https://gauchospace.ucsb.edu/courses/user/profile.php" title="View profile"><i aria-hidden="true" class="fa fa-user"></i>View profile</a><a class="dropdown-item" href="https://gauchospace.ucsb.edu/courses/user/edit.php" title="Edit profile"><i aria-hidden="true" class="fa fa-cog"></i>Edit profile</a><a class="dropdown-item" href="https://gauchospace.ucsb.edu/courses/grade/report/overview/index.php" title="Grades"><i aria-hidden="true" class="fa fa-list-alt"></i>Grades</a><a class="dropdown-item" href="https://gauchospace.ucsb.edu/courses/user/preferences.php" title="Preferences"><i aria-hidden="true" class="fa fa-cog"></i>Preferences</a><a class="dropdown-item" href="https://gauchospace.ucsb.edu/courses/login/logout.php?sesskey=8HY58l27JA" title="Log out"><i aria-hidden="true" class="fa fa-sign-out"></i>Log out</a>
+</div>                            </li>
+
+                        
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <div id="page-header" class="container d-none d-sm-block">
+        <div class="row">
+
+        <div class="col-lg-4">
+        <div class="d-flex align-items-start bd-highlight"><div id="sitetitle" class="p-2 bd-highlight d-none d-sm-block"><h1>GEOG 176B - TECHNICAL GIS - Winter 2021</h1></div></div>        </div>
+
+        <div class="col-lg-8 p-0 my-auto">
+                                                <div class="socialbox pull-right d-none d-lg-block">
+                                                    </div>
+                        
+                
+                <div id="course-header">
+                                    </div>
+
+            </div>
+            </div>
+
+    </div>
+
+
+
+
+
+<div id="nav-drawer" data-region="drawer" class="d-print-none moodle-has-zindex closed" aria-hidden="true" tabindex="-1">
+    <div id="nav-drawer-inner">
+        <nav class="list-group">
+            <ul class="list-unstyled components">
+
+                <a class="list-group-item list-group-item-action" href="https://gauchospace.ucsb.edu/courses/" data-key="" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="1" data-nodetype="1" data-collapse="0" data-forceopen="1" data-isactive="1" data-hidden="0"  data-preceedwithhr="0" data-parent-key="main-navigation-drawer"><div class="m-l-0"><i class="fa fa-home fa-lg"></i> Home</div></a></li><a href="#main-navigation-drawer1" class="list-group-item dropdown-toggle" aria-haspopup="true" data-target="#" data-toggle="collapse" title=""><i class="fa fa-briefcase fa-lg"></i> My Courses</a><ul class="collapse" id="main-navigation-drawer1"><a class="list-group-item list-group-item-action" href="https://gauchospace.ucsb.edu/courses/course/view.php?id=103714" data-key="" data-isexpandable="0" data-indent="1" data-showdivider="0" data-type="1" data-nodetype="1" data-collapse="0" data-forceopen="1" data-isactive="1" data-hidden="0"  data-preceedwithhr="0" data-parent-key="main-navigation-drawer1"><div class=" m-l-1">GEOG 176B - W21</div></a></li><a class="list-group-item list-group-item-action" href="https://gauchospace.ucsb.edu/courses/course/view.php?id=101604" data-key="" data-isexpandable="0" data-indent="1" data-showdivider="0" data-type="1" data-nodetype="1" data-collapse="0" data-forceopen="1" data-isactive="1" data-hidden="0"  data-preceedwithhr="0" data-parent-key="main-navigation-drawer1"><div class=" m-l-1">WRIT 107T - W21</div></a></li><a class="list-group-item list-group-item-action" href="https://gauchospace.ucsb.edu/courses/course/view.php?id=103704" data-key="" data-isexpandable="0" data-indent="1" data-showdivider="0" data-type="1" data-nodetype="1" data-collapse="0" data-forceopen="1" data-isactive="1" data-hidden="0"  data-preceedwithhr="0" data-parent-key="main-navigation-drawer1"><div class=" m-l-1">GEOG 132 - W21</div></a></li><a class="list-group-item list-group-item-action" href="https://gauchospace.ucsb.edu/courses/course/view.php?id=104884" data-key="" data-isexpandable="0" data-indent="1" data-showdivider="0" data-type="1" data-nodetype="1" data-collapse="0" data-forceopen="1" data-isactive="1" data-hidden="0"  data-preceedwithhr="0" data-parent-key="main-navigation-drawer1"><div class=" m-l-1">EARTH 105/EARTH 205 - W21</div></a></li><a class="list-group-item list-group-item-action" href="https://gauchospace.ucsb.edu/courses/course/view.php?id=92855" data-key="" data-isexpandable="0" data-indent="1" data-showdivider="0" data-type="1" data-nodetype="1" data-collapse="0" data-forceopen="1" data-isactive="1" data-hidden="0"  data-preceedwithhr="0" data-parent-key="main-navigation-drawer1"><div class=" m-l-1">GEOG 133 - F20</div></a></li><a class="list-group-item list-group-item-action" href="https://gauchospace.ucsb.edu/courses/course/view.php?id=92845" data-key="" data-isexpandable="0" data-indent="1" data-showdivider="0" data-type="1" data-nodetype="1" data-collapse="0" data-forceopen="1" data-isactive="1" data-hidden="0"  data-preceedwithhr="0" data-parent-key="main-navigation-drawer1"><div class=" m-l-1">GEOG 115A - F20</div></a></li><a class="list-group-item list-group-item-action" href="https://gauchospace.ucsb.edu/courses/course/view.php?id=93865" data-key="" data-isexpandable="0" data-indent="1" data-showdivider="0" data-type="1" data-nodetype="1" data-collapse="0" data-forceopen="1" data-isactive="1" data-hidden="0"  data-preceedwithhr="0" data-parent-key="main-navigation-drawer1"><div class=" m-l-1">EARTH   4 - F20</div></a></li><a class="list-group-item list-group-item-action" href="https://gauchospace.ucsb.edu/courses/course/view.php?id=73766" data-key="" data-isexpandable="0" data-indent="1" data-showdivider="0" data-type="1" data-nodetype="1" data-collapse="0" data-forceopen="1" data-isactive="1" data-hidden="0"  data-preceedwithhr="0" data-parent-key="main-navigation-drawer1"><div class=" m-l-1">ENV S 162/GEOG 162 - S20</div></a></li></ul><a href="#main-navigation-drawer2" class="list-group-item dropdown-toggle" aria-haspopup="true" data-target="#" data-toggle="collapse" title=""><i class="fa fa-sitemap fa-lg"></i><span class="menutitle">This course</span></a><ul class="collapse" id="main-navigation-drawer2"><a class="list-group-item list-group-item-action" href="https://gauchospace.ucsb.edu/courses/user/index.php?id=103714" data-key="" data-isexpandable="0" data-indent="1" data-showdivider="0" data-type="1" data-nodetype="1" data-collapse="0" data-forceopen="1" data-isactive="1" data-hidden="0"  data-preceedwithhr="0" data-parent-key="main-navigation-drawer2"><div class=" m-l-1"><i class="icon fa fa-users fa-lg"></i>People</div></a></li><a class="list-group-item list-group-item-action" href="https://gauchospace.ucsb.edu/courses/grade/report/index.php?id=103714" data-key="" data-isexpandable="0" data-indent="1" data-showdivider="0" data-type="1" data-nodetype="1" data-collapse="0" data-forceopen="1" data-isactive="1" data-hidden="0"  data-preceedwithhr="0" data-parent-key="main-navigation-drawer2"><div class=" m-l-1"><i class="icon fa fa-table fa-fw icon" aria-hidden="true"  ></i>Grades</div></a></li><a class="list-group-item list-group-item-action" href="https://gauchospace.ucsb.edu/courses/mod/lti/index.php?id=103714" data-key="" data-isexpandable="0" data-indent="1" data-showdivider="0" data-type="1" data-nodetype="1" data-collapse="0" data-forceopen="1" data-isactive="1" data-hidden="0"  data-preceedwithhr="0" data-parent-key="main-navigation-drawer2"><div class=" m-l-1"><img class="icon icon" alt="" aria-hidden="true" src="https://gauchospace.ucsb.edu/courses/theme/image.php/adaptable/lti/1611255101/icon" />External tools</div></a></li><a class="list-group-item list-group-item-action" href="https://gauchospace.ucsb.edu/courses/mod/feedback/index.php?id=103714" data-key="" data-isexpandable="0" data-indent="1" data-showdivider="0" data-type="1" data-nodetype="1" data-collapse="0" data-forceopen="1" data-isactive="1" data-hidden="0"  data-preceedwithhr="0" data-parent-key="main-navigation-drawer2"><div class=" m-l-1"><img class="icon icon" alt="" aria-hidden="true" src="https://gauchospace.ucsb.edu/courses/theme/image.php/adaptable/feedback/1611255101/icon" />Feedback</div></a></li><a class="list-group-item list-group-item-action" href="https://gauchospace.ucsb.edu/courses/mod/forum/index.php?id=103714" data-key="" data-isexpandable="0" data-indent="1" data-showdivider="0" data-type="1" data-nodetype="1" data-collapse="0" data-forceopen="1" data-isactive="1" data-hidden="0"  data-preceedwithhr="0" data-parent-key="main-navigation-drawer2"><div class=" m-l-1"><img class="icon icon" alt="" aria-hidden="true" src="https://gauchospace.ucsb.edu/courses/theme/image.php/adaptable/forum/1611255101/icon" />Forums</div></a></li><a class="list-group-item list-group-item-action" href="https://gauchospace.ucsb.edu/courses/mod/quiz/index.php?id=103714" data-key="" data-isexpandable="0" data-indent="1" data-showdivider="0" data-type="1" data-nodetype="1" data-collapse="0" data-forceopen="1" data-isactive="1" data-hidden="0"  data-preceedwithhr="0" data-parent-key="main-navigation-drawer2"><div class=" m-l-1"><img class="icon icon" alt="" aria-hidden="true" src="https://gauchospace.ucsb.edu/courses/theme/image.php/adaptable/quiz/1611255101/icon" />Quizzes</div></a></li><a class="list-group-item list-group-item-action" href="https://gauchospace.ucsb.edu/courses/course/resources.php?id=103714" data-key="" data-isexpandable="0" data-indent="1" data-showdivider="0" data-type="1" data-nodetype="1" data-collapse="0" data-forceopen="1" data-isactive="1" data-hidden="0"  data-preceedwithhr="0" data-parent-key="main-navigation-drawer2"><div class=" m-l-1"><img class="icon icon" alt="" aria-hidden="true" src="https://gauchospace.ucsb.edu/courses/theme/image.php/adaptable/mod_page/1611255101/icon" />Resources</div></a></li></ul><a href="#custom-menu-drawer3" class="list-group-item dropdown-toggle" aria-haspopup="true" data-target="#" data-toggle="collapse">Courses</a><ul class="collapse" id="custom-menu-drawer3"><a class="list-group-item list-group-item-action" href="https://gauchospace.ucsb.edu/courses/course/index.php?categoryid=3855" data-key="" data-isexpandable="0" data-indent="1" data-showdivider="0" data-type="1" data-nodetype="1" data-collapse="0" data-forceopen="1" data-isactive="1" data-hidden="0"  data-preceedwithhr="0" data-parent-key="custom-menu-drawer3"><div class=" m-l-1"> Winter 2021</div></a></li><a class="list-group-item list-group-item-action" href="https://gauchospace.ucsb.edu/courses/course/index.php?categoryid=3530" data-key="" data-isexpandable="0" data-indent="1" data-showdivider="0" data-type="1" data-nodetype="1" data-collapse="0" data-forceopen="1" data-isactive="1" data-hidden="0"  data-preceedwithhr="0" data-parent-key="custom-menu-drawer3"><div class=" m-l-1"> Fall 2020</div></a></li><a class="list-group-item list-group-item-action" href="https://gauchospace.ucsb.edu/courses/course/index.php?categoryid=9" data-key="" data-isexpandable="0" data-indent="1" data-showdivider="0" data-type="1" data-nodetype="1" data-collapse="0" data-forceopen="1" data-isactive="1" data-hidden="0"  data-preceedwithhr="0" data-parent-key="custom-menu-drawer3"><div class=" m-l-1"> Project Sites</div></a></li><a class="list-group-item list-group-item-action" href="https://gauchospace.ucsb.edu/courses/course/index.php" data-key="" data-isexpandable="0" data-indent="1" data-showdivider="0" data-type="1" data-nodetype="1" data-collapse="0" data-forceopen="1" data-isactive="1" data-hidden="0"  data-preceedwithhr="0" data-parent-key="custom-menu-drawer3"><div class=" m-l-1"> Others</div></a></li><a href="#custom-menu-drawer34" class="list-group-item dropdown-toggle" aria-haspopup="true" data-target="#" data-toggle="collapse"> Archives</a><ul class="collapse" id="custom-menu-drawer34"><a class="list-group-item list-group-item-action" href="https://archive.gauchospace.ucsb.edu/gs20132015/" data-key="" data-isexpandable="0" data-indent="1" data-showdivider="0" data-type="1" data-nodetype="1" data-collapse="0" data-forceopen="1" data-isactive="1" data-hidden="0"  data-preceedwithhr="0" data-parent-key="custom-menu-drawer34"><div class=" m-l-1">Fall 2013 - Spring 2015</div></a></li><a class="list-group-item list-group-item-action" href="https://archive.gauchospace.ucsb.edu/gs20112013/thearchive2/" data-key="" data-isexpandable="0" data-indent="1" data-showdivider="0" data-type="1" data-nodetype="1" data-collapse="0" data-forceopen="1" data-isactive="1" data-hidden="0"  data-preceedwithhr="0" data-parent-key="custom-menu-drawer34"><div class=" m-l-1">Fall 2011 - Summer 2013</div></a></li></ul></ul><a href="#custom-menu-drawer5" class="list-group-item dropdown-toggle" aria-haspopup="true" data-target="#" data-toggle="collapse">Help</a><ul class="collapse" id="custom-menu-drawer5"><a class="list-group-item list-group-item-action" href="https://ucsbcollabsupport.zendesk.com/hc/en-us/categories/200007714-GauchoSpace" target="_blank" data-key="" data-isexpandable="0" data-indent="1" data-showdivider="0" data-type="1" data-nodetype="1" data-collapse="0" data-forceopen="1" data-isactive="1" data-hidden="0"  data-preceedwithhr="0" data-parent-key="custom-menu-drawer5"><div class=" m-l-1"> Help Center</div></a></li><a class="list-group-item list-group-item-action" href="https://ucsbcollabsupport.zendesk.com/hc/en-us/articles/202535614" target="_blank" data-key="" data-isexpandable="0" data-indent="1" data-showdivider="0" data-type="1" data-nodetype="1" data-collapse="0" data-forceopen="1" data-isactive="1" data-hidden="0"  data-preceedwithhr="0" data-parent-key="custom-menu-drawer5"><div class=" m-l-1"> Training</div></a></li><a class="list-group-item list-group-item-action" href="http://collaborate.ucsb.edu/services/faculty-support" target="_blank" data-key="" data-isexpandable="0" data-indent="1" data-showdivider="0" data-type="1" data-nodetype="1" data-collapse="0" data-forceopen="1" data-isactive="1" data-hidden="0"  data-preceedwithhr="0" data-parent-key="custom-menu-drawer5"><div class=" m-l-1">Drop-in Hours</div></a></li></ul>
+            </ul>
+        </nav>
+
+        <nav class="list-group m-t-1">
+                        <a class="list-group-item list-group-item-action " href="https://gauchospace.ucsb.edu/courses/admin/search.php">
+                <div class="m-l-0">
+                    <div class="media">
+                        <span class="media-left">
+                            <i class="icon fa fa-wrench fa-fw" aria-hidden="true"></i>
+                        </span>
+                        <span class="media-body ">Site administration</span>
+                    </div>
+                </div>
+            </a>
+        </nav>
+    </div>
+</div>
+
+<div id="main-navbar" class="d-none d-lg-block">
+    <div class="container">
+        <div class="navbar navbar-expand-md btco-hover-menu">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <nav role="navigation" aria-label="Site links">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a title="" class="nav-link" href="https://gauchospace.ucsb.edu/courses/"><i class="fa fa-home fa-lg"></i> Home</a></li><li class="nav-item dropdown my-auto"><a href="#" class="nav-link dropdown-toggle my-auto" role="button" id="main-navigation0" aria-haspopup="true" aria-expanded="false" aria-controls="dropdownmain-navigation0" data-target="#" data-toggle="dropdown" title=""><i class="fa fa-briefcase fa-lg"></i> My Courses</a><ul role="menu" class="dropdown-menu" id="dropdownmain-navigation0" aria-labelledby="main-navigation0"><li class=""><a title="GEOG 176B - TECHNICAL GIS - Winter 2021" class="dropdown-item" href="https://gauchospace.ucsb.edu/courses/course/view.php?id=103714">GEOG 176B - W21</a></li><li class=""><a title="WRIT 107T - TECHNICAL WRITING - Winter 2021" class="dropdown-item" href="https://gauchospace.ucsb.edu/courses/course/view.php?id=101604">WRIT 107T - W21</a></li><li class=""><a title="GEOG 132 - Coastal Pollution - Winter 2021" class="dropdown-item" href="https://gauchospace.ucsb.edu/courses/course/view.php?id=103704">GEOG 132 - W21</a></li><li class=""><a title="EARTH 105 - EARTH&#039;S CLIMATE - Winter 2021" class="dropdown-item" href="https://gauchospace.ucsb.edu/courses/course/view.php?id=104884">EARTH 105/EARTH 205 - W21</a></li><li class=""><a title="GEOG 133 - TROP METEOROLOLGY - Fall 2020" class="dropdown-item" href="https://gauchospace.ucsb.edu/courses/course/view.php?id=92855">GEOG 133 - F20</a></li><li class=""><a title="Geog 115A - Remote Sensing" class="dropdown-item" href="https://gauchospace.ucsb.edu/courses/course/view.php?id=92845">GEOG 115A - F20</a></li><li class=""><a title="EARTH   4 - INTRO OCEANOGRAPHY - Fall 2020" class="dropdown-item" href="https://gauchospace.ucsb.edu/courses/course/view.php?id=93865">EARTH   4 - F20</a></li><li class=""><a title="ENV S 162/GEOG 162 - WATER QUALITY - Spring 2020" class="dropdown-item" href="https://gauchospace.ucsb.edu/courses/course/view.php?id=73766">ENV S 162/GEOG 162 - S20</a></li></ul></li><li class="nav-item dropdown my-auto"><a href="#" class="nav-link dropdown-toggle my-auto" role="button" id="main-navigation0" aria-haspopup="true" aria-expanded="false" aria-controls="dropdownmain-navigation0" data-target="#" data-toggle="dropdown" title=""><i class="fa fa-sitemap fa-lg"></i><span class="menutitle">This course</span></a><ul role="menu" class="dropdown-menu" id="dropdownmain-navigation0" aria-labelledby="main-navigation0"><li class=""><a title="" class="dropdown-item" href="https://gauchospace.ucsb.edu/courses/user/index.php?id=103714"><i class="icon fa fa-users fa-lg"></i>People</a></li><li class=""><a title="" class="dropdown-item" href="https://gauchospace.ucsb.edu/courses/grade/report/index.php?id=103714"><i class="icon fa fa-table fa-fw icon" aria-hidden="true"  ></i>Grades</a></li><li class=""><a class="dropdown-item" href="https://gauchospace.ucsb.edu/courses/mod/lti/index.php?id=103714"><img class="icon icon" alt="" aria-hidden="true" src="https://gauchospace.ucsb.edu/courses/theme/image.php/adaptable/lti/1611255101/icon" />External tools</a></li><li class=""><a class="dropdown-item" href="https://gauchospace.ucsb.edu/courses/mod/feedback/index.php?id=103714"><img class="icon icon" alt="" aria-hidden="true" src="https://gauchospace.ucsb.edu/courses/theme/image.php/adaptable/feedback/1611255101/icon" />Feedback</a></li><li class=""><a class="dropdown-item" href="https://gauchospace.ucsb.edu/courses/mod/forum/index.php?id=103714"><img class="icon icon" alt="" aria-hidden="true" src="https://gauchospace.ucsb.edu/courses/theme/image.php/adaptable/forum/1611255101/icon" />Forums</a></li><li class=""><a class="dropdown-item" href="https://gauchospace.ucsb.edu/courses/mod/quiz/index.php?id=103714"><img class="icon icon" alt="" aria-hidden="true" src="https://gauchospace.ucsb.edu/courses/theme/image.php/adaptable/quiz/1611255101/icon" />Quizzes</a></li><li class=""><a class="dropdown-item" href="https://gauchospace.ucsb.edu/courses/course/resources.php?id=103714"><img class="icon icon" alt="" aria-hidden="true" src="https://gauchospace.ucsb.edu/courses/theme/image.php/adaptable/mod_page/1611255101/icon" />Resources</a></li></ul></li>
+                    <li class="nav-item dropdown my-auto"><a href="#" class="nav-link dropdown-toggle my-auto" role="button" id="0" aria-haspopup="true" aria-expanded="false" aria-controls="dropdown0" data-target="#" data-toggle="dropdown">Courses</a><ul role="menu" class="dropdown-menu" id="dropdown0" aria-labelledby="0"><li class=""><a class="dropdown-item" href="https://gauchospace.ucsb.edu/courses/course/index.php?categoryid=3855"> Winter 2021</a></li><li class=""><a class="dropdown-item" href="https://gauchospace.ucsb.edu/courses/course/index.php?categoryid=3530"> Fall 2020</a></li><li class=""><a class="dropdown-item" href="https://gauchospace.ucsb.edu/courses/course/index.php?categoryid=9"> Project Sites</a></li><li class=""><a class="dropdown-item" href="https://gauchospace.ucsb.edu/courses/course/index.php"> Others</a></li><li class="nav-item dropdown my-auto"><a href="#" class="nav-link dropdown-toggle my-auto" role="button" id="00" aria-haspopup="true" aria-expanded="false" aria-controls="dropdown00" data-target="#" data-toggle="dropdown"> Archives</a><ul role="menu" class="dropdown-menu" id="dropdown00" aria-labelledby="00"><li class=""><a class="dropdown-item" href="https://archive.gauchospace.ucsb.edu/gs20132015/">Fall 2013 - Spring 2015</a></li><li class=""><a class="dropdown-item" href="https://archive.gauchospace.ucsb.edu/gs20112013/thearchive2/">Fall 2011 - Summer 2013</a></li></ul></li></ul></li><li class="nav-item dropdown my-auto"><a href="#" class="nav-link dropdown-toggle my-auto" role="button" id="0" aria-haspopup="true" aria-expanded="false" aria-controls="dropdown0" data-target="#" data-toggle="dropdown">Help</a><ul role="menu" class="dropdown-menu" id="dropdown0" aria-labelledby="0"><li class=""><a class="dropdown-item" href="https://ucsbcollabsupport.zendesk.com/hc/en-us/categories/200007714-GauchoSpace" target="_blank"> Help Center</a></li><li class=""><a class="dropdown-item" href="https://ucsbcollabsupport.zendesk.com/hc/en-us/articles/202535614" target="_blank"> Training</a></li><li class=""><a class="dropdown-item" href="http://collaborate.ucsb.edu/services/faculty-support" target="_blank">Drop-in Hours</a></li></ul></li>                </ul>
+            </nav>
+
+                <ul class="navbar-nav ml-auto">
+
+                    
+                    
+                                                            <li class="nav-item mx-0 hbll">
+                                <a class="nav-link moodlewidth" href="javascript:void(0);"
+                                    title="Full screen">
+                                    <i class="fa fa-expand fa-lg"></i>
+                                                                        <span class="zoomdesc">Full screen</span>
+                                                                    </a>
+                            </li>
+                            <li class="nav-item mx-0 sbll">
+                                <a class="nav-link moodlewidth" href="javascript:void(0);"
+                                    title="Standard view">
+                                    <i class="fa fa-compress fa-lg"></i>
+                                                                        <span class="zoomdesc">Standard view</span>
+                                                                    </a>
+                            </li>
+                                    </ul>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</header>
+
+
+<div class="container outercont">
+    <div class="row"><div  id="page-header" class="col-12 pt-3 pb-3 d-none d-sm-flex original">
+    <div class="d-flex flex-fill flex-wrap align-items-center">
+        <div id="page-navbar" class="mr-auto">
+            <nav role="navigation" aria-label="Breadcrumb">
+            <ol class="breadcrumb d-none d-sm-flex original"><li><a href="https://gauchospace.ucsb.edu/courses/"><i title="Home" class="fa fa-home fa-lg"></i></a></li><li class="separator"><i class="spnlink"><i class="arrow-top"></i><i class="arrow-bottom"></i></i></li><li><span tabindex="0">My courses</span></li><li class="separator"><i class="spnlink"><i class="arrow-top"></i><i class="arrow-bottom"></i></i></li><li><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" title="GEOG 176B - TECHNICAL GIS - Winter 2021" href="https://gauchospace.ucsb.edu/courses/course/view.php?id=103714"><span itemprop="title">GEOG 176B - W21</span></a></span></li><li class="separator"><i class="spnlink"><i class="arrow-top"></i><i class="arrow-bottom"></i></i></li><li><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="https://gauchospace.ucsb.edu/courses/course/view.php?id=103714#section-2"><span itemprop="title">January 11 - January 17</span></a></span></li><li class="separator"><i class="spnlink"><i class="arrow-top"></i><i class="arrow-bottom"></i></i></li><li class="lastli"><a href="https://gauchospace.ucsb.edu/courses/mod/resource/view.php?id=5801455" id="action_link601090b21be123" class="" >Lab 2 Data</a></li></ol>
+        </nav>
+        </div>
+    </div>
+</div></div>    <div id="page-content" class="row">
+        <section id="region-main" class="col-12">
+            <span class="notifications" id="user-notifications"></span><div role="main"><span id="maincontent"></span><h2>Lab 2 Data</h2><div class="resourceworkaround">Click <a href="https://gauchospace.ucsb.edu/courses/pluginfile.php/13646509/mod_resource/content/2/lab_2.zip" onclick="this.target='_blank'">lab_2.zip</a> link to view the file.</div></div><nav class="activity_footer activity-navigation">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="float-left">
+                <a href="https://gauchospace.ucsb.edu/courses/mod/resource/view.php?id=5801449&forceview=1" id="prev-activity-link" class="previous_activity prevnext"  title="Section 2 Slides" ><span class="nav_icon"><i class="fa fa-angle-double-left"></i></span><span class="text"><span class="nav_guide">Previous Activity</span><br>Section 2 Slides</span></a>
+
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="float-right">
+                <a href="https://gauchospace.ucsb.edu/courses/mod/book/view.php?id=5801461&forceview=1" id="next-activity-link" class="next_activity prevnext"  title="Lab 2: GIS Data Models" ><span class="text"><span class="nav_guide">Next Activity</span><br>Lab 2: GIS Data Models</span><span class="nav_icon"><i class="fa fa-angle-double-right"></i></span></a>
+
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="jumpnav">
+    <div class="jumpmenu">
+    <form method="post" action="https://gauchospace.ucsb.edu/courses/course/jumpto.php" class="form-inline" id="url_select_f601090b21be124">
+        <input type="hidden" name="sesskey" value="8HY58l27JA">
+            <label for="jump-to-activity" class="sr-only">
+                Jump to...
+            </label>
+        <select  id="jump-to-activity" class="custom-select jumpmenu" name="jump"
+                 >
+                    <option value="" selected>Jump to...</option>
+                    <option value="/mod/forum/view.php?id=5308144&amp;forceview=1" >Instructor Announcements</option>
+                    <option value="/mod/resource/view.php?id=5801329&amp;forceview=1" >GEOG 176B Syllabus</option>
+                    <option value="/mod/lti/view.php?id=5803855&amp;forceview=1" >Zoom Link for all 176B lectures</option>
+                    <option value="/mod/url/view.php?id=5801335&amp;forceview=1" >Lab Attendance</option>
+                    <option value="/mod/resource/view.php?id=5801341&amp;forceview=1" >Class Objectives and Overview</option>
+                    <option value="/mod/resource/view.php?id=5801347&amp;forceview=1" >Representation</option>
+                    <option value="/mod/resource/view.php?id=5801371&amp;forceview=1" >Lab 0 (Optional)</option>
+                    <option value="/mod/resource/view.php?id=5801383&amp;forceview=1" >lab 0 data</option>
+                    <option value="/mod/resource/view.php?id=5801365&amp;forceview=1" >Section 1 Slides</option>
+                    <option value="/mod/book/view.php?id=5801395&amp;forceview=1" >Lab 1: Introduction to ArcGIS</option>
+                    <option value="/mod/resource/view.php?id=5895931&amp;forceview=1" >Lab 1 Instructions in PDF</option>
+                    <option value="/mod/resource/view.php?id=5801377&amp;forceview=1" >Lab 1 Data</option>
+                    <option value="/mod/quiz/view.php?id=5801407&amp;forceview=1" >Lab 1 Questions (Tuesday)</option>
+                    <option value="/mod/resource/view.php?id=5801425&amp;forceview=1" >GIS Data Classification Supplement</option>
+                    <option value="/mod/resource/view.php?id=5801431&amp;forceview=1" >GIS Data Classification Supplement II</option>
+                    <option value="/mod/resource/view.php?id=5959741&amp;forceview=1" >Recording of today's lecture</option>
+                    <option value="/mod/resource/view.php?id=5801437&amp;forceview=1" >Objects and Fields; Vectors and Rasters</option>
+                    <option value="/mod/resource/view.php?id=5801449&amp;forceview=1" >Section 2 Slides</option>
+                    <option value="/mod/book/view.php?id=5801461&amp;forceview=1" >Lab 2: GIS Data Models</option>
+                    <option value="/mod/resource/view.php?id=5953371&amp;forceview=1" >Lab2 Instructions in PDF</option>
+                    <option value="/mod/quiz/view.php?id=5801473&amp;forceview=1" >Lab 2 Questions (Tuesday)</option>
+                    <option value="/mod/resource/view.php?id=5801491&amp;forceview=1" >Relational Model and GIS Data Formats</option>
+                    <option value="/mod/resource/view.php?id=6009592&amp;forceview=1" >Section 3 Slides</option>
+                    <option value="/mod/feedback/view.php?id=6008762&amp;forceview=1" >Section Feedback (Tuesday)</option>
+                    <option value="/mod/resource/view.php?id=5801503&amp;forceview=1" >GeoDatabase (Management Systems)</option>
+                    <option value="/mod/resource/view.php?id=5801509&amp;forceview=1" >UML, Primitive Modeling Elements</option>
+                    <option value="/mod/resource/view.php?id=5801521&amp;forceview=1" >Section 4 Slides</option>
+                    <option value="/mod/resource/view.php?id=5801527&amp;forceview=1" >Lab3 Data</option>
+                    <option value="/mod/resource/view.php?id=5801533&amp;forceview=1" >Lab3 Instruction in PDF</option>
+                    <option value="/mod/book/view.php?id=5801539&amp;forceview=1" >Lab 3: Geodatabase Design</option>
+                    <option value="/mod/quiz/view.php?id=5801551&amp;forceview=1" >Lab 3 Questions (Tuesday)</option>
+        </select>
+            <noscript>
+                <input type="submit" class="btn btn-secondary ml-1" value="Go">
+            </noscript>
+    </form>
+</div>
+
+</div>        </section>
+
+            </div>
+</div>
+
+
+<footer id="page-footer" class="d-none d-md-block">
+
+<div id="course-footer"></div>
+                <div class="container blockplace1"><div class="row"><div class="left-col col-6"><p style="text-align:left;"><a href="http://www.ucsb.edu/"><img src="https://gauchospace.ucsb.edu/courses/theme/adaptable/pix/UC_Santa_Barbara_Wordmark_White_RGB.png" alt="UCSB logo" style="vertical-align:text-bottom;margin-top:0px;margin-bottom:0px;" height="25" /></a> 
+          <a href="https://moodle.org/"><img src="https://gauchospace.ucsb.edu/courses/pix/moodlelogo.png" alt="moodle" style="vertical-align:text-bottom;margin-top:0px;margin-bottom:0px;" class="img-responsive" width="98" height="25" /></a></p>
+         </div><div class="left-col col-6"><div style="text-align:left;">Copyright © 2020 The Regents of the University of California, All Rights Reserved</div>
+<div style="text-align:left;"><a href="https://help.lsit.ucsb.edu/hc/en-us/articles/209048737">Service Description</a> / <a href="http://www.policy.ucsb.edu/terms_of_use/" target="_blank" rel="noreferrer noopener">Terms of Use</a> / <a href="http://www.policy.ucsb.edu/privacy-notification/" target="_blank" rel="noreferrer noopener">Privacy Notification</a> / <a href="http://www.collaborate.ucsb.edu/accessibility" target="_blank" rel="noreferrer noopener">Accessibility</a>                                          <i><a href="https://gauchospace.ucsb.edu/courses/auth/a2fa/login.php">admin</a></i><br /></div></div></div></div>        <div class="container">
+            <div class="row">
+                <div class="col-12 pagination-centered">
+                </div>
+            </div>
+        </div>
+
+    <div class="info container2 clearfix">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 my-md-0 my-2">
+                    <div class="tool_usertours-resettourcontainer"></div>
+<p>Last Modified December 28, 2020 / Questions or concerns? Please <a href="https://help.lsit.ucsb.edu/hc/en-us/requests/new">contact us.</a></p>                </div>
+
+                <div class="col-md-4 my-md-0 my-2 helplink">
+                </div>
+                <div class="col-md-4 my-md-0 my-2">
+                                    </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div id="back-to-top"><i class="fa fa-angle-up "></i></div>
+
+
+
+   
+            <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-125669104-2', {'siteSpeedSampleRate': 50});
+            ga('send', {'hitType' : 'pageview',
+            'page' : '/',
+            'title' : ''
+            });
+			
+            </script>
+			<script>
+//<![CDATA[
+var require = {
+    baseUrl : 'https://gauchospace.ucsb.edu/courses/lib/requirejs.php/1611245403/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://gauchospace.ucsb.edu/courses/lib/javascript.php/1611245403/lib/jquery/jquery-3.4.1.min',
+        jqueryui: 'https://gauchospace.ucsb.edu/courses/lib/javascript.php/1611245403/lib/jquery/ui-1.12.1/jquery-ui.min',
+        jqueryprivate: 'https://gauchospace.ucsb.edu/courses/lib/javascript.php/1611245403/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+      // Stub module for 'process'. This is a workaround for a bug in MathJax (see MDL-60458).
+      '*': { process: 'core/first' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script src="https://gauchospace.ucsb.edu/courses/lib/javascript.php/1611245403/lib/requirejs/require.min.js"></script>
+<script>
+//<![CDATA[
+M.util.js_pending("core/first");require(['core/first'], function() {
+require(['core/prefetch']);
+;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp(function(videojs) {
+        videojs.options.flash.swf = "https://gauchospace.ucsb.edu/courses/media/player/videojs/videojs/video-js.swf";
+videojs.addLanguage('en', {
+  "Audio Player": "Audio Player",
+  "Video Player": "Video Player",
+  "Play": "Play",
+  "Pause": "Pause",
+  "Replay": "Replay",
+  "Current Time": "Current Time",
+  "Duration": "Duration",
+  "Remaining Time": "Remaining Time",
+  "Stream Type": "Stream Type",
+  "LIVE": "LIVE",
+  "Seek to live, currently behind live": "Seek to live, currently behind live",
+  "Seek to live, currently playing live": "Seek to live, currently playing live",
+  "Loaded": "Loaded",
+  "Progress": "Progress",
+  "Progress Bar": "Progress Bar",
+  "progress bar timing: currentTime={1} duration={2}": "{1} of {2}",
+  "Fullscreen": "Fullscreen",
+  "Non-Fullscreen": "Non-Fullscreen",
+  "Mute": "Mute",
+  "Unmute": "Unmute",
+  "Playback Rate": "Playback Rate",
+  "Subtitles": "Subtitles",
+  "subtitles off": "subtitles off",
+  "Captions": "Captions",
+  "captions off": "captions off",
+  "Chapters": "Chapters",
+  "Descriptions": "Descriptions",
+  "descriptions off": "descriptions off",
+  "Audio Track": "Audio Track",
+  "Volume Level": "Volume Level",
+  "You aborted the media playback": "You aborted the media playback",
+  "A network error caused the media download to fail part-way.": "A network error caused the media download to fail part-way.",
+  "The media could not be loaded, either because the server or network failed or because the format is not supported.": "The media could not be loaded, either because the server or network failed or because the format is not supported.",
+  "The media playback was aborted due to a corruption problem or because the media used features your browser did not support.": "The media playback was aborted due to a corruption problem or because the media used features your browser did not support.",
+  "No compatible source was found for this media.": "No compatible source was found for this media.",
+  "The media is encrypted and we do not have the keys to decrypt it.": "The media is encrypted and we do not have the keys to decrypt it.",
+  "Play Video": "Play Video",
+  "Close": "Close",
+  "Close Modal Dialog": "Close Modal Dialog",
+  "Modal Window": "Modal Window",
+  "This is a modal window": "This is a modal window",
+  "This modal can be closed by pressing the Escape key or activating the close button.": "This modal can be closed by pressing the Escape key or activating the close button.",
+  ", opens captions settings dialog": ", opens captions settings dialog",
+  ", opens subtitles settings dialog": ", opens subtitles settings dialog",
+  ", opens descriptions settings dialog": ", opens descriptions settings dialog",
+  ", selected": ", selected",
+  "captions settings": "captions settings",
+  "subtitles settings": "subtitles settings",
+  "descriptions settings": "descriptions settings",
+  "Text": "Text",
+  "White": "White",
+  "Black": "Black",
+  "Red": "Red",
+  "Green": "Green",
+  "Blue": "Blue",
+  "Yellow": "Yellow",
+  "Magenta": "Magenta",
+  "Cyan": "Cyan",
+  "Background": "Background",
+  "Window": "Window",
+  "Transparent": "Transparent",
+  "Semi-Transparent": "Semi-Transparent",
+  "Opaque": "Opaque",
+  "Font Size": "Font Size",
+  "Text Edge Style": "Text Edge Style",
+  "None": "None",
+  "Raised": "Raised",
+  "Depressed": "Depressed",
+  "Uniform": "Uniform",
+  "Dropshadow": "Dropshadow",
+  "Font Family": "Font Family",
+  "Proportional Sans-Serif": "Proportional Sans-Serif",
+  "Monospace Sans-Serif": "Monospace Sans-Serif",
+  "Proportional Serif": "Proportional Serif",
+  "Monospace Serif": "Monospace Serif",
+  "Casual": "Casual",
+  "Script": "Script",
+  "Small Caps": "Small Caps",
+  "Reset": "Reset",
+  "restore all settings to the default values": "restore all settings to the default values",
+  "Done": "Done",
+  "Caption Settings Dialog": "Caption Settings Dialog",
+  "Beginning of dialog window. Escape will cancel and close the window.": "Beginning of dialog window. Escape will cancel and close the window.",
+  "End of dialog window.": "End of dialog window.",
+  "{1} is loading.": "{1} is loading.",
+  "Exit Picture-in-Picture": "Exit Picture-in-Picture",
+  "Picture-in-Picture": "Picture-in-Picture"
+});
+
+    });
+});;
+
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-125669104-2', {'siteSpeedSampleRate': 50});
+    ga('set', 'anonymizeIp', true);
+    ga('send', {'hitType' : 'pageview',
+                'page' : '/WINTER+2021/Geography/GEOG+176B+-+TECHNICAL+GIS+-+Winter+2021/resource/Lab+2+Data',
+                'title' : 'GEOG 176B - TECHNICAL GIS - Winter 2021'
+                });
+;
+M.util.js_pending('theme_adaptable/adaptable'); require(['theme_adaptable/adaptable'], function(amd) {amd.init(); M.util.js_complete('theme_adaptable/adaptable');});;
+M.util.js_pending('theme_adaptable/bsoptions'); require(['theme_adaptable/bsoptions'], function(amd) {amd.init({"stickynavbar":true}); M.util.js_complete('theme_adaptable/bsoptions');});;
+M.util.js_pending('theme_adaptable/drawer'); require(['theme_adaptable/drawer'], function(amd) {amd.init(); M.util.js_complete('theme_adaptable/drawer');});;
+function legacy_activity_onclick_handler_1(e) { e.halt(); window.open('https://gauchospace.ucsb.edu/courses/mod/resource/view.php?id=5959741&redirect=1'); return false; };
+function legacy_activity_onclick_handler_2(e) { e.halt(); window.open('https://gauchospace.ucsb.edu/courses/mod/resource/view.php?id=5801437&redirect=1'); return false; };
+function legacy_activity_onclick_handler_3(e) { e.halt(); window.open('https://gauchospace.ucsb.edu/courses/mod/resource/view.php?id=5801449&redirect=1'); return false; };
+function legacy_activity_onclick_handler_4(e) { e.halt(); window.open('https://gauchospace.ucsb.edu/courses/mod/resource/view.php?id=5801455&redirect=1'); return false; };
+function legacy_activity_onclick_handler_5(e) { e.halt(); window.open('https://gauchospace.ucsb.edu/courses/mod/resource/view.php?id=5953371&redirect=1'); return false; };
+M.util.js_pending('block_settings/settingsblock'); require(['block_settings/settingsblock'], function(amd) {amd.init("6", null); M.util.js_complete('block_settings/settingsblock');});;
+
+require(['jquery', 'message_popup/notification_popover_controller'], function($, controller) {
+    var container = $('#nav-notification-popover-container');
+    var controller = new controller(container);
+    controller.registerEventListeners();
+    controller.registerListNavigationEventListeners();
+});
+;
+
+    require(['core/yui'], function(Y) {
+            Y.on('click', legacy_activity_onclick_handler_4, '#action_link601090b21be123', null);
+    });
+;
+
+        require(['jquery', 'core/custom_interaction_events'], function($, CustomEvents) {
+            CustomEvents.define('#jump-to-activity', [CustomEvents.events.accessibleChange]);
+            $('#jump-to-activity').on(CustomEvents.events.accessibleChange, function() {
+                if (!$(this).val()) {
+                    return false;
+                }
+                $('#url_select_f601090b21be124').submit();
+            });
+        });
+    ;
+M.util.js_pending('core/log'); require(['core/log'], function(amd) {amd.setConfig({"level":"warn"}); M.util.js_complete('core/log');});;
+M.util.js_pending('core/page_global'); require(['core/page_global'], function(amd) {amd.init(); M.util.js_complete('core/page_global');});M.util.js_complete("core/first");
+});
+//]]>
+</script>
+<script>
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"Last modified","name":"Name","error":"Error","info":"Information","yes":"Yes","no":"No","ok":"OK","cancel":"Cancel","confirm":"Confirm","areyousure":"Are you sure?","closebuttontitle":"Close","unknownerror":"Unknown error","file":"File","url":"URL"},"repository":{"type":"Type","size":"Size","invalidjson":"Invalid JSON string","nofilesattached":"No files attached","filepicker":"File picker","logout":"Logout","nofilesavailable":"No files available","norepositoriesavailable":"Sorry, none of your current repositories can return files in the required format.","fileexistsdialogheader":"File exists","fileexistsdialog_editor":"A file with that name has already been attached to the text you are editing.","fileexistsdialog_filemanager":"A file with that name has already been attached","renameto":"Rename to \"{$a}\"","referencesexist":"There are {$a} alias\/shortcut files that use this file as their source","select":"Select"},"admin":{"confirmdeletecomments":"You are about to delete comments, are you sure?","confirmation":"Confirmation"},"debug":{"debuginfo":"Debug info","line":"Line","stacktrace":"Stack trace"},"langconfig":{"labelsep":":"}};
+//]]>
+</script>
+<script>
+//<![CDATA[
+(function() {Y.use("moodle-filter_glossary-autolinker",function() {M.filter_glossary.init_filter_autolinking({"courseid":0});
+});
+Y.use("moodle-filter_mathjaxloader-loader",function() {M.filter_mathjaxloader.configure({"mathjaxconfig":"\nMathJax.Hub.Config({\n    config: [\"Accessible.js\", \"Safe.js\"],\n    errorSettings: { message: [\"!\"] },\n    skipStartupTypeset: true,\n    messageStyle: \"none\"\n});\n","lang":"en"});
+});
+M.util.help_popups.setup(Y);
+ M.util.js_pending('random601090b21be125'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random601090b21be125'); });
+})();
+//]]>
+</script>
+
+</div>
+<!-- Start of ucsbcollabsupport Zendesk Widget script -->
+<!-- (may not work to prevent spam) -->
+<script>
+    $(document).ready(function() {
+        if (!$('body').hasClass("notloggedin")) {
+             var s = document.createElement("script");
+             s.id = "ze-snippet";
+             s.src = "https://static.zdassets.com/ekr/snippet.js?key=bcbffe6c-ee96-4060-b47a-f0650406f5ec";
+            $('body').append(s);
+        }
+    });
+</script> 
+    <!-- End of ucsbcollabsupport Zendesk Widget script -->
+
+<!-- Quickly target specific pages to stop the overlap of the sidebar without having to submit changes to the repo -->
+<script>
+$(document).ready(function() {
+    var rect1 = $('#region-main');
+    var rect2 = $('#block-region-side-post');
+    // Add more body ids to the targets array as needed.
+    var targets = ['page-mod-attendance', 'page-mod-feedback-show_entries'];
+    var overlap = !(rect1.right < rect2.left || 
+                rect1.left > rect2.right || 
+                rect1.bottom < rect2.top || 
+                rect1.top > rect2.bottom);
+    var bodyId = $('body').attr('id');
+    var adjustMyLayout = false;
+    for (var i = 0; i < targets.length; i++) {
+        var re = new RegExp(targets[i], 'i');
+        if (re.test(bodyId)) {
+            adjustMyLayout = true;
+        }
+    }
+    if (overlap && adjustMyLayout) {
+        $('body').addClass('content-only');
+    }
+});
+/*
+    // UCSB - On the tiles course format, Safari won't allow you to click on the edit menu items
+    // When editing is turned on. The links are unresponsive. I have discovered that if
+    // you let the menu render so all the events are registered to the elements, then remove the
+    // data-rel attribute, it will use the href links instead of invoking javascript/ajax to
+    // do the edit things. This only affects Safari with the Tiles format and the Adaptable theme.
+    // This should not be ported over to 3.9.
+*/
+    if (navigator.userAgent.indexOf('Safari') != -1) {
+        $('body#page-course-view-tiles.editing a.toggle-display.textmenu').on('click', function (e) {
+            var targ = e.target;
+            var menuid = '#'+targ.getAttribute('id') + '-menu';
+            menuid = menuid.replace('toggle-','');
+            $(menuid).removeAttr('data-rel');
+        });
+    }
+</script>
+
+</body>
+</html>
